@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  skip_before_action :authenticate_user!, only: %i[create]
   include RackSessionFix
   respond_to :json
   # before_action :configure_sign_up_params, only: [:create]
